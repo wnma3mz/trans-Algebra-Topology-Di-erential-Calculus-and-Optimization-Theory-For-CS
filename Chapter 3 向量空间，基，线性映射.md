@@ -1,6 +1,4 @@
-第三章
-
-# 向量空间、基、线性映射
+# 第三章 向量空间、基、线性映射
 
 ## 3.1向量空间
 
@@ -25,6 +23,70 @@ k（或k-向量空间）是一个集合e（向量的）加上两个运算+：e×
 （v3）（αβ）·u=α·（β·u）；
 
 （v4）1·u=u。
+
+$x = ( x _ { 1 } , \ldots , x _ { n } )$
+
+$( x _ { 1 } , \ldots , x _ { n } ) + ( y _ { 1 } , \ldots , y _ { n } ) = ( x _ { 1 } + y _ { 1 } , \ldots , x _ { n } + y _ { n } )$
+
+$\because R \times R ^ { n } \rightarrow R ^ { n }$
+
+$\lambda \cdot ( x _ { 1 } , \ldots , x _ { n } ) = ( \lambda x _ { 1 } , \ldots , \lambda x _ { n } )$
+
+$+ : E \times E \rightarrow E$
+
+$\because K \times E \rightarrow E$
+
+$\alpha , \beta \in K$
+
+$u , v \in E$
+
+$\alpha \cdot ( u + v ) = ( \alpha \cdot u ) + ( \alpha \cdot v )$
+
+$( \alpha + \beta ) \cdot u = ( \alpha \cdot u ) + ( \beta \cdot u )$
+
+$( \alpha * \beta ) \cdot u = \alpha \cdot ( \beta \cdot u )$
+
+$1 \cdot u = u$
+
+$\alpha \in K$
+
+$v \in E$
+
+$\alpha \cdot v i$
+
+$\alpha \cdot 0 = 0$
+
+$\alpha \cdot ( - v ) = - ( \alpha \cdot v )$
+
+$0 \cdot v = 0$
+
+$( - \alpha ) \cdot v = - ( \alpha \cdot v )$
+
+$u \in E$
+
+$\lambda \in K , \text { if } \lambda \neq 0 \text { and } \lambda \cdot u = 0 , \text { then } u = 0$
+
+$\lambda ^ { - 1 } \cdot ( \lambda \cdot u ) = \lambda ^ { - 1 } \cdot 0$
+
+$\lambda ^ { - 1 } \cdot 0 = 0$
+
+$\lambda ^ { - 1 } \cdot ( \lambda \cdot u ) = ( \lambda ^ { - 1 } \lambda ) \cdot u = 1 \cdot u = u$
+
+$u = 0$
+
+$E = R ^ { n }$
+
+$\because R \times R ^ { n } \rightarrow R ^ { n }$
+
+$\lambda \cdot ( x _ { 1 } , \ldots , x _ { n } ) = ( 0 , \ldots , 0 )$
+
+$( x _ { 1 } , \ldots , x _ { n } ) \in R ^ { n }$
+
+$\lambda \in R$
+
+$C ( ] a , b [ )$
+
+$f : ] a , b [ \rightarrow R$
 
 在（v3）中，表示K字段中的乘法。
 
@@ -235,7 +297,7 @@ V=λ1e1+····+λnen，
 λ1e1+λ2e2+···
 
 
- 
+
 
 3.3。线性独立性，子空间
 
@@ -382,7 +444,7 @@ i∈i−j i∈i j∈j−i
 有人可能会想，如果我们在组成线性组合的系数中添加额外的条件，会发生什么。这里有三个很重要的自然限制（和往常一样，我们假设我们的索引集是有限的）：
 
 
- 
+
 
 (1)    考虑组合pi∈iλiui，其中
 
@@ -623,7 +685,7 @@ V=xxiui，
 给定一个场k和任意（非空）集i，我们可以形成一个向量空间k（i），在某种意义上，它是维i_的标准向量空间。
 
 
- 
+
 
 3.5。矩阵
 
@@ -733,7 +795,7 @@ ab=a1b1+·····+anbn。
 虽然有些计算有点繁琐，但3.11号提案中列出的性质很容易得到验证。命题4.1给出了一个更具概念性的证明。
 
 
- 
+
 
 提案3.11.（1）给定任意矩阵a∈mm，n（k），b∈mn，p（k），c∈mp，q（k），我们得到
 
@@ -1044,7 +1106,7 @@ H=ID H=（F−1 F）H=F−1（F H）=F−1 ID=F−1。
 虽然在这本书中，我们不会有很多场合使用商空间，但它们是代数的基础。下一节可以省略，直到需要为止。
 
 
- 
+
 
 3.7。商空间
 
