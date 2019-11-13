@@ -82,15 +82,7 @@ $e^{\prime} \cdot a=a \quad \text { for all } \quad a \in M$ （G2l）
 
 命题2.1意味着独异点的同一元素是唯一的，并且由于每个群都是一个独异点，所以一个群的同一元素是唯一的。此外，一个群中的每个元素都有一个*唯一的逆*矩阵。这是一个更普遍的事实的结果：
 
-**命题2.2** *在具有单位元 $e$ 的独异点 $M$ 中*，如果某个元素 $a \in M$ 有左逆 $a^{\prime} \in M$ 和右逆 $a^{\prime \prime} \in M$，这意味着
-
-$a^{\prime} \cdot a=e$ （G3l）
-
-与
-
-$a \cdot a^{\prime \prime}=e$ （G3r）
-
-得到，$a^{\prime}=a^{\prime \prime}$
+**命题2.2** *在具有单位元 $e$ 的独异点 $M$ 中*，如果某个元素 $a \in M$ 有左逆 $a^{\prime} \in M$ 和右逆 $a^{\prime \prime} \in M$，这意味着 $a^{\prime} \cdot a=e$ （G3l） 与 $a \cdot a^{\prime \prime}=e$ （G3r）得到，$a^{\prime}=a^{\prime \prime}$
 
 *证明*  利用（G3l）和 $e$ 是一个单元元素，我们有 $\left(a^{\prime} \cdot a\right) \cdot a^{\prime \prime}=e \cdot a^{\prime \prime}=a^{\prime \prime}$
 
@@ -106,111 +98,121 @@ $a^{\prime}=a^{\prime} \cdot\left(a \cdot a^{\prime \prime}\right)=\left(a^{\pri
 
 **定义2.2.** 如果一个 $G$ 组有有限个 $n$ 个元素，我们就说 $G$ 是一个 $n$ *阶*的群。如果 $G$ 是无限的，我们就说 $G$ 有*无限阶*。群的阶通常用 $|G|$ 表示（如果 $G$ 是有限的）。
 
-对于群 $G$，对于任意两个子集 $R, S \subseteq G$，我们让
+对于群 $G$，对于任意两个子集 $R, S \subseteq G$，令 $R S=\{r \cdot s | r \in R, s \in S\}$
 
-$R S=\{r \cdot s | r \in R, s \in S\}$
+特别地，对于任何 $g \in G$，如果 $R=\{g\}$，写成 $g S=\{g \cdot s | s \in S\}$
 
-特别地，对于任何 $g \in G$，如果 $R=\{g\}$，我们写下
+同样地，如果 $S= \{g\}$，写成 $R g=\{r \cdot g | r \in R\}$
 
-$g S=\{g \cdot s | s \in S\}$
+从现在开始，我们将拿掉乘号，并将 $g_1g_2$ 写为 $g_1\cdot g_2$。
 
-同样地，如果 $S= \{g\}$，我们写
+**定义2.3.** 令 $G$ 为一个群。对于任意 $g\in G$，设 $L_g$，通过 $g$ *左移得到*，得 $L_g(a)=ga$ ，并且所有 $a\in G$，和 $R_g$，由 $g$ *右移得到*，由 $R_g(a)=ag$ ，并且所有 $a\in G$。
 
-$R g=\{r \cdot g | r \in R\}$
+​	通常使用以下简单的事实。
 
-从现在开始，我们将去掉乘号，并将g1 g2写为g1·g2。
+**命题2.3.** *给定群 $G$* ，$L_g$ 和 $R_g$ 称为双射。
 
-定义2.3.让G成为一个群体。对于任意g∈g，定义lg，由g左平移，由lg（a）=ga，对于所有a∈g，和rg，由g右平移，由rg（a）=ag，对于所有a∈g。
+*证明* 我们证明了 $L_g$ ，那么证明 $R_g$ G是相似的。
 
-通常使用以下简单的事实。
+​	如果有 $L_g(a)=L_g(b)$，那么 $ga=gb$，在左边乘以 $g^{−1}$，我们得到 $a=b$，所以 $L_g$注入。对于任何$b\in G$，我们有 $L_g(g^{-1}b)=gg^{-1}b$，所以 $L_g$ 是满射的。因此，$L_g$ 是双射。
 
-提案2.3.给定G组，lg和rg的翻译是双射。
+**定义2.4.** *给定群 $G$*，$G$ 的子集 $H$ 是 $G$ iff的*子群*。
 
-证据。我们为LG展示了这一点，证明RG是相似的。
+(1)   $G$ 的单位元 $e$ 也属于 $H$（ $e\in H$ ）；
 
-如果lg（a）=lg（b），那么ga=gb，在左边乘以g−1，我们得到a=b，所以lg注入。对于任何b∈g，我们有lg（g−1b）=gg−1b=b，所以lg是可预测的。因此，lg是双目标的。
+(2)   对于所有的 $h_1，h_2\in H$，我们有 $h_1h_2\in H$；
 
-定义2.4.给定G群，G的子集H是G iff的子群。
+(3)   对于所有的 $h\in H$，我们有 $h^{−1}\in H$。
 
-(1)   G的单位元E也属于H（E∈H）；
+​	下列命题的证明留作练习。
 
-(2)   对于所有的h1，h2∈h，我们有h1h2∈h；
+**命题2.4.** *给定群 $G$*，子集 $H \subseteq G$ 是 $G$ 的一个*子群*，当 $h_1h_2\in H$，则 $h_1h_2^{-1}\in H$。
 
-(3)   对于所有的h∈h，我们有h−1∈h。
+​	如果群 $G$ 是有限的，那么可以使用以下标准。
 
+**命题2.5.** *给定有限群 $G$*，子集 $H \subseteq G$ 是 $G$ iff 的子群
 
+（1）$e\in H$；
 
+（2）$H$ *在乘法下闭合*。
 
+*证明* 我们只需要证明定义2.4的条件（3）成立。对于任何 $a\in H$，由于左移 $L_a$ 是双射的，它对 $H$ 的限制是单射的，而由于 $H$ 是有限的，它也是双射的。由于 $e\in H$，存在唯一的 $b\in H$，因此 $L_a(b)=ab=e$。但是，如果 $a^{-1}$ 是 $G$ 中 $a$ 的倒数，我们也有 $L_a(a^{-1})=aa^{-1}=e$，并且由于 $L_a$的单射，我们得到 $a^{−1}=b\in H$。
 
-$a0=a0·（a·a00）=（a0·a）·a00=a00，$
+**例2.2.**
 
+1. 对于任意整数 $n\in \mathbb{Z}$，集合 $n \mathbb{Z}=\{n k | k \in \mathbb{Z}\}$ 是群 $\mathbb{Z}$ 的子群。
+2. 矩阵集 $\mathrm{GL}^{+}(n, \mathbb{R})=\{A \in \mathrm{GL}(n, \mathbb{R}) | \operatorname{det}(A)>0\}$ 是群 $\mathrm{GL}(n, \mathbb{R})$ 的子群。
+3.    群 $\mathrm{SL}(n, \mathbb{R})$ 是群 $\mathrm{GL}(n, \mathbb{R})$ 的一个子群。
 
+4. 群 $\rm O(n)$ 是群 $\mathrm{GL}(n, \mathbb{R})$ 的一个子群。
 
+5. 群 $\rm SO(n)$ 是群 $\rm O(n)$ 的一个子群，是群 $\mathrm{SL}(n, \mathbb{R})$ 的一个子群。
 
+6. 不难证明每个2×2旋转矩阵 $R \in \mathrm{SO}(2)$ 都可以写成
 
-$L_{g}(a)=g a$
+   $R=\left(\begin{array}{cc}{\cos \theta} & {-\sin \theta} \\ {\sin \theta} & {\cos \theta}\end{array}\right), \quad \text { with } \quad 0 \leq \theta<2 \pi$
 
-$a \in G$
+   然后，通过观察矩阵，可以将 $\mathrm{SO}(2)$ 视为 $\mathrm{SO}(3)$ 的一个子群。
 
-$R_{g}(a)=a g$
+   $R=\left(\begin{array}{cc}{\cos \theta} & {-\sin \theta} \\ {\sin \theta} & {\cos \theta}\end{array}\right)$
 
-$a \in G$
+   作为矩阵
 
-$L_{g}(a)=L_{g}(b)$
+   $Q=\left(\begin{array}{ccc}{\cos \theta} & {-\sin \theta} & {0} \\ {\sin \theta} & {\cos \theta} & {0} \\ {0} & {0} & {1}\end{array}\right)$
 
-$L_{g}\left(g^{-1} b\right)=g g^{-1} b=b$
+7. 形如2×2上三角矩阵集
 
-$H(e \in H)$
+   $\left(\begin{array}{cc}{a} & {b} \\ {0} & {c}\end{array}\right) \quad a, b, c \in \mathbb{R}, a, c \neq 0$
 
-$h_{1}, h_{2} \in H$
+   是群 $\mathrm{GL}(2, \mathbb{R})$ 的子群。
 
-$h_{1} h_{2} \in H$
+8. 由四个矩阵组成的集合 $V$
 
-$H \subseteq G$
+   $\left(\begin{array}{cc}{ \pm 1} & {0} \\ {0} & { \pm 1}\end{array}\right)$
 
-$h_{1}, h_{2} \in H$
+   是群 $\mathrm{GL}(2, \mathbb{R})$ 的一个子群，称为 *Klein four-group*。
 
-$h_{1} h_{2}^{-1} \in H$
+**定义2.5.** 如果 $H$ 是 $G$ 的一个子群，任意元素满足 $g\in G$ ，那么$gH$ 形式的集合称为 $G$ 中 $H$ 的*左模集*，$Hg$ 形式的集合称为 $G$ 中 $H$ 的*右模集*，左模集（分别，右模）引出一个等价关系～定义如下：对于所有 $g_{1}, g_{2} \in G$，$g_1～g_2$  iff $g_1H=g_2H$（同样，$g_1～g_2$  iff $Hg_1=Hg_2$）。显然，是一个等价关系。
 
-$L_{a}(b)=a b=e$
+​	现在，我们声明以下事实：
 
-$L_{a}\left(a^{-1}\right)=a a^{-1}=e$
+**命题2.6.** *给定群 $G$ 和 $G$ 的任意子群 $H$，我们得到 $g_{1} H=g_{2} H$ iff $g_{2}^{-1} g_{1} H=H \text { iff } g_{2}^{-1} g_{1} \in H$，对于所有 ,$g_{1}, g_{2} \in G$。*
 
-$a^{-1}=b \in H$
+*证明* 如果我们把双射同时应用于g1h和g2h，我们得到
 
-$n \mathbb{Z}=\{n k | k \in \mathbb{Z}\}$
+并且，既然1∈h，我们得到g2−1g1∈h，反之，如果g2−1g1∈h，既然h是一个群，那么左边的翻译是h的双射，所以g2−1g1h=h，因此，g2−1g1h=h iff g2−1g1∈h。
 
-$\mathrm{GL}^{+}(n, \mathbb{R})=\{A \in \mathrm{GL}(n, \mathbb{R}) | \operatorname{det}(A)>0\}$
+由此可知，元素G∈G的等价类是coset-gh（resp。汞）。因为lg是h和gh之间的双射，所以cosets gh的基数都相同。图lg-1_rg是左coset-gh和右coset-hg之间的双射，因此它们也具有相同的基数。由于不同的cosets-gh形成了g的一个划分，我们得到如下事实：
 
-$\mathrm{GL}(n, \mathbb{R})$
+提案2.7.（拉格朗日）对于任何有限群G和G的任何子群H，H的阶H除以G的阶N。
 
-$\mathrm{SL}(n, \mathbb{R})$
+定义2.6.给定有限群G和G的子群H，如果n=g和h=h，则比值n/h用（g:h）表示，称为g中h的指数。
 
-$\mathrm{GL}(n, \mathbb{R})$
+指数（g:h）是g中h的左（右）陪集的个数。命题2.7可以表示为
 
-$\mathrm{SL}(n, \mathbb{R})$
+| G=（G:H）H。
 
-$R \in \mathrm{SO}(2)$
+h在g中的左余割集（通常不是一个群）表示g/h。g/h的“点”是通过将coset中的所有元素“折叠”成单个元素来获得的。
 
-$R=\left(\begin{array}{cc}{\cos \theta} & {-\sin \theta} \\ {\sin \theta} & {\cos \theta}\end{array}\right), \quad \text { with } \quad 0 \leq \theta<2 \pi$
+例2.3.
 
-$R=\left(\begin{array}{cc}{\cos \theta} & {-\sin \theta} \\ {\sin \theta} & {\cos \theta}\end{array}\right)$
+\1.    设n为任意正整数，并考虑z的nz子群（在加法下）。0的陪集是0，任意非零整数m∈z的陪集是
 
-$Q=\left(\begin{array}{ccc}{\cos \theta} & {-\sin \theta} & {0} \\ {\sin \theta} & {\cos \theta} & {0} \\ {0} & {0} & {1}\end{array}\right)$
+m+nz=m+nk k∈z。
 
-$\left(\begin{array}{cc}{a} & {b} \\ {0} & {c}\end{array}\right) \quad a, b, c \in \mathbb{R}, a, c \neq 0$
+用m除以n，我们得到一些独特r的m=nq+r，这样0≤r≤n-1。但是我们看到r是coset m+nz中最小的正元素。这意味着在z的nz子群的陪集和残基集0,1，…，n−1模n之间存在双射，或者与z/nz相等的双射。
+
+\2.    gl（n，r）中sl（n，r）的陪集是矩阵集。
+
+a sl（n，r）=a b b∈sl（n，r），a∈gl（n，r）。
 
 $\mathrm{GL}(2, \mathbb{R})$
 
-$\left(\begin{array}{cc}{ \pm 1} & {0} \\ {0} & { \pm 1}\end{array}\right)$
 
-$\mathrm{GL}(2, \mathbb{R})$
 
-$g_{1}, g_{2} \in G$
 
-$g_{1} H=g_{2} H$
 
-$g_{2}^{-1} g_{1} H=H \text { iff } g_{2}^{-1} g_{1} \in H, \text { for all } g_{1}, g_{2} \in G$
+
 
 $L_{g_{2}^{-1}}\left(g_{1} H\right)=g_{2}^{-1} g_{1} H$
 
@@ -300,97 +302,9 @@ $\varphi\left(g^{-1}\right)=(\varphi(g))^{-1}$
 
 
 
-下列命题的证明留作练习。
 
-提案2.4.给定一个群G，子集H G是G的一个子群，当h1，h2∈h，则h1h−2 1∈h。
 
-如果G组是有限的，那么可以使用以下标准。
 
-提案2.5.给定有限群G，子集H G是G iff（1）e∈H的子群；
-
-（2）H在乘法下闭合。
-
-证据。我们只需要证明定义2.4的条件（3）成立。对于任何a∈h，由于左平移la是双射的，它对h的限制是内射的，而由于h是有限的，它也是双射的。由于e∈h，存在唯一的b∈h，因此la（b）=ab=e。但是，如果a−1是g中a的倒数，我们也有la（a−1）=aa−1=e，并且通过la的注入性，我们得到a−1=b∈h。
-
-例2.2.
-
-\1.    对于任意整数n∈z，集合
-
-nz=nk k∈z
-
-是组Z的子组。
-
-\2.    矩阵集
-
-gl+（n，r）=a∈gl（n，r）det（a）>0
-
-是组gl（n，r）的子组。
-
-\3.    sl（n，r）组是gl（n，r）组的一个子组。
-
-\4.    O（N）组是GL（N，R）组的一个子组。
-
-\5.    群SO（n）是群O（n）的一个子群，是群SL（n，r）的一个子群。
-
-\6.    不难证明每2×2旋转矩阵r∈so（2）都可以写成
-
-，0≤θ<2π。
-
-然后，通过查看矩阵，可以将so（2）视为so（3）的一个子组。
-
-作为矩阵
-
-.
-
-\7.    形式的2×2上三角矩阵集
-
-![img](file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.gif)
-
-是组gl（2，r）的子组。
-
-\8.    由四个矩阵组成的集合V
-
-![img](file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.gif)
-
-是gl（2，r）组的一个子组，称为klein four组。
-
-定义2.5.如果h是g的一个子群，g∈g是任意元素，那么gh形式的集合称为g中h的左陪集，hg形式的集合称为g中h的右陪集，左陪集（resp）。h的右陪集）诱导一个等价关系～定义如下：对于所有g1，g2∈g，
-
-g1～g2 iff g1h=g2h
-
-（响应g1～g2 iff hg1=hg2）。显然，是一个等价关系。
-
-现在，我们声明以下事实：
-
-提案2.6.给定G群和G的任意子群H，我们得到g1 h=g2h iff g2−1g1h=h iff g2−1g1∈h，对于所有g1，g2∈g。
-
-证据。如果我们把双射同时应用于g1h和g2h，我们得到
-
-并且，既然1∈h，我们得到g2−1g1∈h，反之，如果g2−1g1∈h，既然h是一个群，那么左边的翻译是h的双射，所以g2−1g1h=h，因此，g2−1g1h=h iff g2−1g1∈h。
-
-由此可知，元素G∈G的等价类是coset-gh（resp。汞）。因为lg是h和gh之间的双射，所以cosets gh的基数都相同。图lg-1_rg是左coset-gh和右coset-hg之间的双射，因此它们也具有相同的基数。由于不同的cosets-gh形成了g的一个划分，我们得到如下事实：
-
-提案2.7.（拉格朗日）对于任何有限群G和G的任何子群H，H的阶H除以G的阶N。
-
-定义2.6.给定有限群G和G的子群H，如果n=g和h=h，则比值n/h用（g:h）表示，称为g中h的指数。
-
-指数（g:h）是g中h的左（右）陪集的个数。命题2.7可以表示为
-
-| G=（G:H）H。
-
-h在g中的左余割集（通常不是一个群）表示g/h。g/h的“点”是通过将coset中的所有元素“折叠”成单个元素来获得的。
-
-例2.3.
-
-\1.    设n为任意正整数，并考虑z的nz子群（在加法下）。0的陪集是0，任意非零整数m∈z的陪集是
-
-m+nz=m+nk k∈z。
-
-用m除以n，我们得到一些独特r的m=nq+r，这样0≤r≤n-1。但是我们看到r是coset m+nz中最小的正元素。这意味着在z的nz子群的陪集和残基集0,1，…，n−1模n之间存在双射，或者与z/nz相等的双射。
-
-\2.    gl（n，r）中sl（n，r）的陪集是矩阵集。
-
-a sl（n，r）=a b b∈sl（n，r），a∈gl（n，r）。
 
 由于a是可逆的，所以det（a）=06，如果det（a）>0，我们可以写a=（det（a））1/n（（det（a））-1/na，如果det（a）<0，我们可以写a=（det（a））1/n（（-det（a））-1/na。但如果det（a）>0，我们有（det（a））-1/na∈sl（n，r），如果det（a）>0，我们有−（−det（a））-1/na∈sl（n，r），如果det（a）<
 
